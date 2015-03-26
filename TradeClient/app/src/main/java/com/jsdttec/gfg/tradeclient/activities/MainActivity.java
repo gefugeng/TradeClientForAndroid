@@ -1,17 +1,14 @@
-package com.jsdttec.gfg.tradeclient;
+package com.jsdttec.gfg.tradeclient.activities;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
+
+import com.jsdttec.gfg.tradeclient.R;
 
 
 public class MainActivity extends Activity {
@@ -34,6 +31,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 View view = View.inflate(MainActivity.this, R.layout.quotationactivity, null);
+
                 containerLayout.removeAllViews();
                 containerLayout.addView(view);
             }

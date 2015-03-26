@@ -1,7 +1,9 @@
-package com.jsdttec.gfg.tradeclient;
+package com.jsdttec.gfg.tradeclient.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
+
+import com.jsdttec.gfg.tradeclient.R;
 
 /**
  * Created by gfg on 3/25 0025.
