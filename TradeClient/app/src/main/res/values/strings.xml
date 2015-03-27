@@ -5,8 +5,8 @@
     <string name="login_usr_password_text">密码：</string>
     <string name="login_usr_remember_text">记住账号</string>
     <string name="login_login_button">登录</string>
-    <string name="main_quotation_button">行情</string>
-    <string name="main_trade_button">买卖</string>
-    <string name="main_holding_button">持仓</string>
-    <string name="main_announce_button">公告</string>
+    <string name="main_quotation_text">行情</string>
+    <string name="main_trade_text">买卖</string>
+    <string name="main_holding_text">持仓</string>
+    <string name="main_announce_text">公告</string>
 </resources>

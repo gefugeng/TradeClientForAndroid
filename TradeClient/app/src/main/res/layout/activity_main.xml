@@ -1,62 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:orientation="vertical">
 
-    <TextView
+    <FrameLayout
+        android:id="@+id/main_content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/app_name"
-        android:textSize="@dimen/title_text_size" />
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:id="@+id/container_layout"></LinearLayout>
+        android:layout_height="60dp"
+        android:background="@drawable/tab_bg">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/main_quotation_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-        <View
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
 
-            android:layout_height="1px"
-            android:background="#000000"
-            android:layout_width="fill_parent"></View>
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/main_quotation_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/main_quotation_text"
+                    android:textColor="#82858b" />
+            </LinearLayout>
+        </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
+        <RelativeLayout
+            android:id="@+id/main_trade_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-        <Button
-            android:id="@+id/quotation_button"
-            android:layout_height="wrap_content"
-            android:text="@string/main_quotation_button"
-            style="@style/MainButtonStyle" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
 
-        <Button
-            android:id="@+id/trade_button"
-            style="@style/MainButtonStyle"
-            android:layout_height="wrap_content"
-            android:text="@string/main_trade_button" />
+                <TextView
+                    android:id="@+id/main_trade_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/main_trade_text"
+                    android:textColor="#82858b" />
+            </LinearLayout>
+        </RelativeLayout>
 
-        <Button
-            android:id="@+id/holding_button"
-            android:layout_height="wrap_content"
-            android:text="@string/main_holding_button"
-            style="@style/MainButtonStyle" />
+        <RelativeLayout
+            android:id="@+id/main_holding_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-        <Button
-            android:id="@+id/announce_button"
-            style="@style/MainButtonStyle"
-            android:layout_height="wrap_content"
-            android:text="@string/main_announce_button" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/main_holding_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/main_holding_text"
+                    android:textColor="#82858b" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/main_announce_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/main_announce_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/main_announce_text"
+                    android:textColor="#82858b" />
+            </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
 
 </LinearLayout>

@@ -1,7 +1,12 @@
-package com.jsdttec.gfg.tradeclient.activities;
+package com.jsdttec.gfg.tradeclient.Fragments;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.jsdttec.gfg.tradeclient.R;
@@ -14,18 +19,26 @@ import java.util.List;
 /**
  * Created by gfg on 3/25 0025.
  */
-public class HoldingActivity extends Activity {
+public class HoldingFragment extends Fragment {
     private List<HoldingDetail> fruitList = new ArrayList<HoldingDetail>();
+    View holdingLayout;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.holdingactivity);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        holdingLayout = inflater.inflate(R.layout.holdingactivity,
+                container, false);
 
+        return holdingLayout;
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
         initData(); // 初始化数据
-        HoldingDetailAdapter adapter = new HoldingDetailAdapter(HoldingActivity.this,
+        HoldingDetailAdapter adapter = new HoldingDetailAdapter(this.getActivity(),
                 R.layout.holdinglistitem, fruitList);
-        ListView listView = (ListView) findViewById(R.id.holding_listview);
+        ListView listView = (ListView) getView().findViewById(R.id.holding_listview);
 
         listView.setAdapter(adapter);
     }
