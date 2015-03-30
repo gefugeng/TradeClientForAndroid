@@ -9,4 +9,8 @@
     <string name="main_trade_text">买卖</string>
     <string name="main_holding_text">持仓</string>
     <string name="main_announce_text">公告</string>
+    <string name="holding_commodityname_text">商品名称</string>
+    <string name="holding_tradename_text">买卖方向</string>
+    <string name="holding_holdquantity_text">持仓量</string>
+    <string name="holding_holdprice_text">持仓价</string>
 </resources>

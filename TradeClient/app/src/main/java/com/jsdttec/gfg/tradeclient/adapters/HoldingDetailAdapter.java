@@ -28,14 +28,19 @@ public class HoldingDetailAdapter extends ArrayAdapter<HoldingDetail> {
     public View getView(int position, View convertView, ViewGroup parent) {
         HoldingDetail holdingDetail = getItem(position); // 获取当前项的实例
         View view = LayoutInflater.from(getContext()).inflate(resourceId, null);
+
         TextView name = (TextView) view.findViewById(R.id.holdinglistitem_name_text);
         name.setText(holdingDetail.getName());
+
         TextView tradeMarkName = (TextView) view.findViewById(R.id.holdinglistitem_trademarkname_text);
         tradeMarkName.setText(holdingDetail.getTradeMarkName());
+
         TextView holdQuantity = (TextView) view.findViewById(R.id.holdinglistitem_holdquantity_text);
-        name.setText(String.valueOf(holdingDetail.getHoldQuantity()));
+        holdQuantity.setText(String.valueOf(holdingDetail.getHoldQuantity()));
+
         TextView holdPrice = (TextView) view.findViewById(R.id.holdinglistitem_holdprice_text);
-        name.setText(String.valueOf(holdingDetail.getHoldPrice()));
+        holdPrice.setText(String.valueOf(holdingDetail.getHoldPrice()));
+
         return view;
     }
 }
